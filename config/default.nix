@@ -3,4 +3,11 @@
   imports = [
     ./bufferline.nix
   ];
+
+  colorschemes.rose-pine.enable = true;
+  plugins = {
+    lightline = {
+      enable = true;
+    };
+  };
 }
