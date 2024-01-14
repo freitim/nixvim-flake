@@ -4,9 +4,9 @@
     ./bufferline.nix
   ];
 
-  options = {
-    number = true;
-  };
+  # options = {
+  #   number = true;
+  # };
 
   colorschemes.rose-pine.enable = true;
   
