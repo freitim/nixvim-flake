@@ -19,6 +19,18 @@
       lualine = {
         enable = true;
       };
+      
+      treesitter = {
+	enable = true;
+      };
+
+      telescope = {
+	enable = true;
+      };
+
+      obsidian = {
+	enable = true;
+      };
 
       lsp = {
         enable = true;
