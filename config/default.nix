@@ -75,7 +75,7 @@
 
       extraPlugins = with pkgs.vimPlugins; [
 	quarto-nvim
-      ]
+      ];
     };
   };
 }
