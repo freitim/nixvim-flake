@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   # Import all your configuration modules here
   imports = [
@@ -72,10 +74,11 @@
 	  };
 	};
       };
-
-      extraPlugins = with pkgs.vimPlugins; [
-	quarto-nvim
-      ];
     };
+
+    extraPlugins = with pkgs.vimPlugins; [
+      otter-nvim
+      quarto-nvim
+    ];
   };
 }
