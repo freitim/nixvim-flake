@@ -1,84 +1,45 @@
 { pkgs, ... }:
 
 {
-  # Import all your configuration modules here
+  # extraConfigLua = ''
+  #   vim.opt.termguicolors = true
+  # '';
+
   imports = [
-    ./bufferline.nix
+    ./config.nix
+    ./appearance.nix
+    ./lsp.nix
   ];
   
-  config = {
-    options = {
-      number = true;
-      shiftwidth = 4;
-    };
-
-    colorschemes.rose-pine = {
+  plugins = {
+    dashboard = {
       enable = true;
-      style = "dawn";
     };
     
-    plugins = {
-      lualine = {
-        enable = true;
-      };
-      
-      treesitter = {
-	enable = true;
-      };
-
-      telescope = {
-	enable = true;
-      };
-
-      obsidian = {
-	enable = true;
-      };
-
-      lsp = {
-        enable = true;
-
-        servers = {
-	  digestif = {
-            enable = true;
-	  };
-
-          html = {
-            enable = true;
-	  };
-          
-          julials = {
-            enable = true;
-	  };
-
-	  # leanls = {
-          #   enable = true;
-	  # };
-
-          lua-ls = {
-            enable = true;
-	  };
-
-          marksman = {
-            enable = true;
-	  };
-
-          nil_ls = {
-            enable = true;
-	  };
-
-          pylsp = {
-            enable = true;
-	    settings.plugins.black = {
-              enabled = true;
-	    };
-	  };
-	};
-      };
+    treesitter = {
+      enable = true;
     };
 
-    extraPlugins = with pkgs.vimPlugins; [
-      otter-nvim
-      quarto-nvim
-    ];
+    telescope = {
+      enable = true;
+      extensions = {
+        file_browser.enable = true;
+        fzf-native.enable = true;
+      };
+    };
+    
+    nvim-cmp = {
+      enable = true;
+    };
+
+    obsidian = {
+      enable = true;
+    };
+
   };
+
+  extraPlugins = with pkgs.vimPlugins; [
+    otter-nvim
+    quarto-nvim
+  ];
 }
