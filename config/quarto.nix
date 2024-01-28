@@ -4,11 +4,14 @@
   extraPlugins = with pkgs.vimPlugins; [
     {
       plugin = otter-nvim;
-      config = "";
     }
     {
-      plugin = quatro-nvim;
-      config = "";
+      plugin = quarto-nvim;
     }
   ];
+
+  extraConfigLua = ''
+    require("otter")
+    require("quarto").setup({})
+  '';
 }

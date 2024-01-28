@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   # extraConfigLua = ''
@@ -7,25 +7,16 @@
 
   imports = [
     ./config.nix
+    ./telescope.nix
     ./appearance.nix
+    ./ui.nix
     ./lsp.nix
+    ./quarto.nix
   ];
   
   plugins = {
-    dashboard = {
-      enable = true;
-    };
-    
     treesitter = {
       enable = true;
-    };
-
-    telescope = {
-      enable = true;
-      extensions = {
-        file_browser.enable = true;
-        fzf-native.enable = true;
-      };
     };
     
     nvim-cmp = {
@@ -35,11 +26,5 @@
     obsidian = {
       enable = true;
     };
-
   };
-
-  extraPlugins = with pkgs.vimPlugins; [
-    otter-nvim
-    quarto-nvim
-  ];
 }
