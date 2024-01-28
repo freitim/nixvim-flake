@@ -22,9 +22,5 @@
     nvim-cmp = {
       enable = true;
     };
-
-    obsidian = {
-      enable = true;
-    };
   };
 }
