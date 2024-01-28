@@ -12,6 +12,7 @@
     ./ui.nix
     ./lsp.nix
     ./quarto.nix
+    ./keymaps.nix
   ];
   
   plugins = {
