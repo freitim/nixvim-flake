@@ -11,6 +11,7 @@
     ./appearance.nix
     ./ui.nix
     ./lsp.nix
+    ./utilities.nix
     ./quarto.nix
   ];
   
