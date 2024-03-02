@@ -11,13 +11,8 @@
     ./appearance.nix
     ./ui.nix
     ./lsp.nix
+		./treesitter.nix
     ./utilities.nix
     ./quarto.nix
   ];
-  
-  plugins = {
-    treesitter = {
-      enable = true;
-    };
-  };
 }
