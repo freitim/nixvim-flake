@@ -2,7 +2,7 @@
 
 {
   plugins = {
-		cmp-treesitter.enabel = true;
+		cmp-treesitter.enable = true;
     treesitter = {
       enable = true;
 			indent = true;
