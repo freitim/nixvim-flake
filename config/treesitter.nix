@@ -6,7 +6,7 @@
     treesitter = {
       enable = true;
 			indent = true;
-			folding = true;
+			folding = false;
 			nixvimInjections = true;
 			ensureInstalled = [
 				"c"
