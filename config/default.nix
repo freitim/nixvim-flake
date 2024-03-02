@@ -19,9 +19,5 @@
     treesitter = {
       enable = true;
     };
-    
-    nvim-cmp = {
-      enable = true;
-    };
   };
 }
