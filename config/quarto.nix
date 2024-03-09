@@ -12,6 +12,14 @@
 
   extraConfigLua = ''
     require("otter")
-    require("quarto").setup({})
+    require("quarto").setup({
+			ft = { "quarto" },
+			dev = false,
+			opts = {
+				lspFeatures = {
+					languages = { "r", "python", "julia", "bash", "lua", "html", "dot", "javascript", "typescript", "ojs" },
+				},
+			},
+		})
   '';
 }
