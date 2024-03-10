@@ -8,12 +8,18 @@
 		cmp-path.enable = true;
 		cmp_luasnip.enable = true;
 
-    nvim-cmp = {
+    cmp = {
       enable = true;
 			autoEnableSources = true;
-			snippet = {
-				expand = "luasnip";
+			settings = {
+				snippet = {
+					expand = ''
+						function(args)
+							require('luasnip').lsp_expand(args.body)
+						end
+					'';
+				};
 			};
-    };
+		};
   };
 }
