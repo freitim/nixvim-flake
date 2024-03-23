@@ -14,8 +14,9 @@
 
     defaults = {
       file_ignore_patterns = [
-	"^.git/"
+				"^.git/"
       ];
+			set_env.COLORTERM = "truecolor";
     };
 
     extensions = {

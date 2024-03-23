@@ -3,39 +3,39 @@
     enable = true;
 
     servers = {
-    digestif = {
-      enable = true;
-	};
+			digestif = {
+				enable = true;
+			};
 
-        html = {
-          enable = true;
-	};
+      html = {
+        enable = true;
+			};
         
-        julials = {
-          enable = true;
-	};
+      julials = {
+        enable = true;
+			};
 
-	# leanls = {
-        #   enable = true;
-	# };
+			# leanls = {
+      #   enable = true;
+			# };
 
-        lua-ls = {
-          enable = true;
-	};
+      lua-ls = {
+        enable = true;
+			};
 
-        marksman = {
-          enable = true;
-	};
+      marksman = {
+        enable = true;
+			};
 
-        nil_ls = {
-          enable = true;
-	};
+      nil_ls = {
+        enable = true;
+			};
 
-        pylsp = {
-          enable = true;
-	  settings.plugins.black = {
+      pylsp = {
+        enable = true;
+				settings.plugins.black = {
             enabled = true;
-	};
+				};
       };
     };
   };
