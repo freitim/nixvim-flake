@@ -13,6 +13,7 @@
     ./lsp.nix
 		./treesitter.nix
     ./utilities.nix
+		./julia.nix
     ./quarto.nix
   ];
 }
