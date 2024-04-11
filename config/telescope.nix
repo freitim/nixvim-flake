@@ -12,7 +12,7 @@
       "<leader>th" = "oldfiles";
     };
 
-    defaults = {
+    settings.defaults = {
       file_ignore_patterns = [
 				"^.git/"
       ];
@@ -20,7 +20,7 @@
     };
 
     extensions = {
-      file_browser.enable = true;
+      file-browser.enable = true;
       frecency.enable = true;
     };
   };
