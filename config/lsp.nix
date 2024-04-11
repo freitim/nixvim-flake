@@ -37,6 +37,10 @@
             enabled = true;
 				};
       };
+
+			ocamllsp = {
+				enable = true;
+			};
     };
   };
 }
