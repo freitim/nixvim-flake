@@ -18,7 +18,8 @@
 		{
 			mode = "n";
 			key = "<leader>t";
-			action = ":lua require('nabla').toggle_virt( { autogen = true } )<cr>";
+			# action = ":lua require('nabla').toggle_virt( { autogen = true } )<cr>";
+			action = ":lua require('nabla').toggle_virt()<cr>";
 			options = {
 				silent = true;
 			};

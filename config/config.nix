@@ -33,7 +33,9 @@
 			tabstop = 4;
       shiftwidth = 4;
 
-			textwidth = 80;
+			# textwidth = 80;
+			wrap = true;
+			linebreak = true;
 			breakindent = true;
 			autoindent = true;
 
