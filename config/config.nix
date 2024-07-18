@@ -33,6 +33,8 @@
 			tabstop = 4;
       shiftwidth = 4;
 
+			textwidth = 80;
+			breakindent = true;
 			autoindent = true;
 
       termguicolors = true;
