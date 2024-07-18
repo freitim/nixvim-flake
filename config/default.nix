@@ -15,5 +15,6 @@
     ./utilities.nix
 		./julia.nix
     ./quarto.nix
+		./markdown.nix
   ];
 }
