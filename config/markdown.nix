@@ -20,7 +20,7 @@
 			key = "<leader>t";
 			action = ":lua require('nabla').toggle_virt( { autogen = true } )<cr>";
 			options = {
-				silent = false;
+				silent = true;
 			};
 		}
 	];
