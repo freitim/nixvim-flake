@@ -27,7 +27,7 @@
         enable = true;
 			};
 
-      nil_ls = {
+      nil-ls = {
         enable = true;
 			};
 
@@ -39,6 +39,10 @@
       };
 
 			ocamllsp = {
+				enable = true;
+			};
+
+			hls = {
 				enable = true;
 			};
     };
