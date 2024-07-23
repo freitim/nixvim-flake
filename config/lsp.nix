@@ -33,9 +33,9 @@
 
       pylsp = {
         enable = true;
-				settings.plugins.black = {
-            enabled = true;
-				};
+				# settings.plugins.black = {
+        #     enabled = true;
+				# };
       };
 
 			ocamllsp = {
