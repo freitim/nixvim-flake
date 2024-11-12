@@ -13,13 +13,14 @@
         
       julials = {
         enable = true;
+				package = null;
 			};
 
 			# leanls = {
       #   enable = true;
 			# };
 
-      lua-ls = {
+      lua_ls = {
         enable = true;
 			};
 
@@ -27,7 +28,7 @@
         enable = true;
 			};
 
-      nil-ls = {
+      nil_ls = {
         enable = true;
 			};
 
@@ -38,12 +39,13 @@
 				# };
       };
 
-			ocamllsp = {
-				enable = true;
-			};
+			# ocamllsp = {
+			# 	enable = true;
+			# };
 
 			hls = {
 				enable = true;
+				installGhc = false;
 			};
     };
   };

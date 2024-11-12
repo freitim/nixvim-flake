@@ -2,7 +2,7 @@
 
 {
   extraPlugins = [
-    {
+		{
       plugin = (pkgs.vimUtils.buildVimPlugin {
         pname = "flatwhite.nvim";
         version = "2023-05-30";
@@ -19,6 +19,9 @@
   ];
 
   plugins = {
+		web-devicons = {
+			enable = true;
+		};
     lualine = {
       enable = true;
     };
