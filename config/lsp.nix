@@ -7,6 +7,10 @@
 				enable = true;
 			};
 
+			gleam = {
+				enable = true;
+			};
+
       html = {
         enable = true;
 			};
