@@ -18,12 +18,12 @@
   #   }
   # ];
 
-	# colorschemes = {
-	# 	base16 = {
-	# 		enable = true;
-	# 		colorscheme = "everforest";
-	# 	};
-	# };
+	colorschemes = {
+		base16 = {
+			enable = true;
+			colorscheme = "everforest";
+		};
+	};
 
   plugins = {
 		web-devicons = {
