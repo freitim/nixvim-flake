@@ -3,6 +3,11 @@
     enable = true;
 
     servers = {
+			# agda_ls = {
+			# 	enable = true;
+			# 	package = "";
+			# };
+
 			digestif = {
 				enable = true;
 			};

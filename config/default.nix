@@ -16,5 +16,6 @@
 		./julia.nix
     ./quarto.nix
 		./markdown.nix
+		./agda.nix
   ];
 }
