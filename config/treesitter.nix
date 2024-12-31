@@ -23,6 +23,7 @@
 					"python"
 					"r"
 					"haskell"
+					"agda"
 				];
 			};
     };
