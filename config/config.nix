@@ -59,6 +59,11 @@
         pattern = "nix";
         command = "setlocal tabstop=2 shiftwidth=2 softtabstop=2";
       }
+      {
+        event = "FileType";
+        pattern = "agda";
+        command = "setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab";
+      }
     ];
   };
 }
