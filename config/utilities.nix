@@ -2,22 +2,24 @@
 
 {
   plugins = {
-		luasnip.enable = true;
-		cmp-buffer.enable = true;
-		cmp-nvim-lsp.enable = true;
-		cmp-path.enable = true;
-		cmp_luasnip.enable = true;
-
     cmp = {
       enable = true;
 			autoEnableSources = true;
+			autoLoad = true;
 			settings = {
-				snippet = {
-					expand = ''
-						function(args)
-							require('luasnip').lsp_expand(args.body)
-						end
-					'';
+				sources = [
+					{ name = "nvim_lsp"; }
+					{ name = "async_path"; }
+					{ name = "buffer"; }
+					{ name = "latex_symbols"; }
+					{ name = "calc"; }
+				];
+				mapping = {
+          "<C-j>" = "cmp.mapping.select_next_item()";
+          "<C-k>" = "cmp.mapping.select_prev_item()";
+          "<C-Space>" = "cmp.mapping.complete()";
+          "<C-e>" = "cmp.mapping.close()";
+          "<Tab>" = "cmp.mapping.confirm({ select = true })";
 				};
 			};
 		};

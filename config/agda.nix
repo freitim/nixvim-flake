@@ -12,7 +12,6 @@
 			key = "<leader>l";
 			action = "<cmd>CornelisLoad<CR>";
 			options = {
-				buffer = true;
 				noremap = true;
 			};
 		}
@@ -21,7 +20,6 @@
 			key = "<leader>r";
 			action = "<cmd>CornelisRefine<CR>";
 			options = {
-				buffer = true;
 				noremap = true;
 			};
 		}
@@ -30,7 +28,6 @@
 			key = "<leader>d";
 			action = "<cmd>CornelisMakeCase<CR>";
 			options = {
-				buffer = true;
 				noremap = true;
 			};
 		}
@@ -39,7 +36,6 @@
 			key = "<leader>,";
 			action = "<cmd>CornelisTypeContext<CR>";
 			options = {
-				buffer = true;
 				noremap = true;
 			};
 		}
@@ -48,7 +44,6 @@
 			key = "<leader>.";
 			action = "<cmd>CornelisTypeContextInfer<CR>";
 			options = {
-				buffer = true;
 				noremap = true;
 			};
 		}
@@ -57,7 +52,6 @@
 			key = "<leader>n";
 			action = "<cmd>CornelisSolve<CR>";
 			options = {
-				buffer = true;
 				noremap = true;
 			};
 		}
@@ -66,7 +60,6 @@
 			key = "<leader>a";
 			action = "<cmd>CornelisAuto<CR>";
 			options = {
-				buffer = true;
 				noremap = true;
 			};
 		}
@@ -75,7 +68,6 @@
 			key = "gd";
 			action = "<cmd>CornelisGoToDefinition<CR>";
 			options = {
-				buffer = true;
 				noremap = true;
 			};
 		}
@@ -84,7 +76,6 @@
 			key = "[/";
 			action = "<cmd>CornelisPrevGoal<CR>";
 			options = {
-				buffer = true;
 				noremap = true;
 			};
 		}
@@ -93,7 +84,6 @@
 			key = "]/";
 			action = "<cmd>CornelisNextGoal<CR>";
 			options = {
-				buffer = true;
 				noremap = true;
 			};
 		}
@@ -102,7 +92,6 @@
 			key = "<C-A>";
 			action = "<cmd>CornelisInc<CR>";
 			options = {
-				buffer = true;
 				noremap = true;
 			};
 		}
@@ -111,7 +100,6 @@
 			key = "<C-X>";
 			action = "<cmd>CornelisDec<CR>";
 			options = {
-				buffer = true;
 				noremap = true;
 			};
 		}
