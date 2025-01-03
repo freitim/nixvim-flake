@@ -5,6 +5,7 @@
 	extraPlugins = [pkgs.vimPlugins.cornelis];
 	extraConfigLua = ''
 		vim.g.cornelis_use_global_binary = 1
+		vim.g.cornelis_no_agda_input = 1
 	'';
 	keymaps = [
 		{
