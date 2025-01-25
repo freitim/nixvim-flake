@@ -1,12 +1,14 @@
 { pkgs, ... }:
 
 {
-	# pkgs.overlays = [cornelis.overlays.cornelis];
-	extraPlugins = [pkgs.vimPlugins.cornelis];
-	extraConfigLua = ''
-		vim.g.cornelis_use_global_binary = 1
-		vim.g.cornelis_no_agda_input = 1
-	'';
+	plugins.cornelis = {
+		enable = true;
+		settings = {
+			use_global_binary = 1;
+			no_agda_input = 1;
+		};
+	};
+
 	keymaps = [
 		{
 			mode = "n";

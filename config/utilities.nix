@@ -13,6 +13,7 @@
 					{ name = "buffer"; }
 					{ name = "latex_symbols"; }
 					{ name = "calc"; }
+					{ name = "render-markdown"; }
 				];
 				mapping = {
           "<C-j>" = "cmp.mapping.select_next_item()";

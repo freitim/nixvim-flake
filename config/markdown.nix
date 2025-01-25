@@ -1,28 +1,52 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-	extraPlugins = with pkgs.vimPlugins; [
-		{ plugin = nabla-nvim; }
-	];	
-
-	keymaps = [
-		{
-			mode = "n";
-			key = "<leader>p";
-			action = ":lua require('nabla').popup()<cr>";
-			options = {
-				silent = true;
+	plugins = {
+		render-markdown = {
+			enable = true;
+			settings = {
+				preset = "obsidian";
+				file_types = [ "markdown" "agda.markdown" ];
+				#render_modes = [ "n" "c" "t" ];		
+				#max_file_size = 100.0;
+				#debounce = 100;
+				#bullet = {
+				#	icons = [
+				#		"◆ "
+				#		"• "
+				#		"• "
+				#	];
+				#	right_pad = 1;
+				#};
+				#code = {
+				#	above = " ";
+				#	below = " ";
+				#	border = "thick";
+				#	language_pad = 2;
+				#	left_pad = 2;
+				#	position = "right";
+				#	right_pad = 2;
+				#	sign = false;
+				#	width = "block";
+				#};
+				#heading = {
+				#	border = true;
+				#	icons = [
+				#		"1 "
+				#		"2 "
+				#		"3 "
+				#		"4 "
+				#		"5 "
+				#		"6 "
+				#	];
+				#	position = "inline";
+				#	sign = false;
+				#	width = "full";
+				#};
+				#signs = {
+				#	enabled = false;
+				#};
 			};
-		}
-
-		{
-			mode = "n";
-			key = "<leader>t";
-			# action = ":lua require('nabla').toggle_virt( { autogen = true } )<cr>";
-			action = ":lua require('nabla').toggle_virt()<cr>";
-			options = {
-				silent = true;
-			};
-		}
-	];
+		};
+	};
 }

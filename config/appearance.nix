@@ -29,7 +29,8 @@
 		web-devicons = {
 			enable = true;
 		};
-    lualine = {
+    
+		lualine = {
       enable = true;
     };
 
