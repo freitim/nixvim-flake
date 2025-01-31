@@ -37,7 +37,7 @@
 		{
 			mode = "n";
 			key = "<leader>,";
-			action = "<cmd>CornelisTypeContext<CR>";
+			action = "<cmd>CornelisTypeContext Normalised<CR>";
 			options = {
 				noremap = true;
 			};
@@ -45,7 +45,7 @@
 		{
 			mode = "n";
 			key = "<leader>.";
-			action = "<cmd>CornelisTypeContextInfer<CR>";
+			action = "<cmd>CornelisTypeContextInfer Normalised<CR>";
 			options = {
 				noremap = true;
 			};
