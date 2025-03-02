@@ -6,7 +6,7 @@
 			enable = true;
 			settings = {
 				preset = "obsidian";
-				file_types = [ "markdown" "agda.markdown" ];
+				file_types = [ "markdown" ];
 				#render_modes = [ "n" "c" "t" ];		
 				#max_file_size = 100.0;
 				#debounce = 100;
