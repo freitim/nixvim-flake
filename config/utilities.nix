@@ -2,25 +2,45 @@
 
 {
   plugins = {
-    cmp = {
-      enable = true;
-			autoEnableSources = true;
-			autoLoad = true;
+		cmp-latex-symbols = {
+			enable = true;
+		};
+
+		blink-compat = {
+			enable = true;
+		};
+
+		blink-cmp = {
+			enable = true;
 			settings = {
-				sources = [
-					{ name = "nvim_lsp"; }
-					{ name = "async_path"; }
-					{ name = "buffer"; }
-					{ name = "latex_symbols"; }
-					{ name = "calc"; }
-					{ name = "render-markdown"; }
-				];
-				mapping = {
-          "<C-j>" = "cmp.mapping.select_next_item()";
-          "<C-k>" = "cmp.mapping.select_prev_item()";
-          "<C-Space>" = "cmp.mapping.complete()";
-          "<C-e>" = "cmp.mapping.close()";
-          "<Tab>" = "cmp.mapping.confirm({ select = true })";
+				keymap = {
+					preset = "default";
+					"<C-k>" = [
+						"select_prev"
+						"fallback_to_mappings"
+					];
+					"<C-j>" = [
+						"select_next"
+						"fallback_to_mappings"
+					];
+					"<Tab>" = [
+						"select_and_accept"
+					];
+				};
+				sources = {
+					default = [
+						"lsp"
+						"path"
+						"snippets"
+						"buffer"
+						"symbols"
+					];
+					providers = {
+						symbols = {
+							name = "latex_symbols";
+							module = "blink.compat.source";
+						};
+					};
 				};
 			};
 		};

@@ -7,8 +7,8 @@
 
   imports = [
     ./config.nix
-    ./telescope.nix
     ./appearance.nix
+    ./telescope.nix
     ./ui.nix
     ./lsp.nix
 		./treesitter.nix
