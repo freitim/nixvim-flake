@@ -39,7 +39,7 @@
 			breakindent = true;
 			autoindent = true;
 
-      termguicolors = true;
+			#termguicolors = true;
     };
 
     keymaps = [
