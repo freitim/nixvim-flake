@@ -4,7 +4,7 @@
 	colorschemes = {
 		base16 = {
 			enable = true;
-			colorscheme = "onedark";
+			colorscheme = "everforest";
 		};
 	};
 
