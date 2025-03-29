@@ -17,14 +17,15 @@
 					preset = "default";
 					"<C-k>" = [
 						"select_prev"
-						"fallback_to_mappings"
+						"fallback"
 					];
 					"<C-j>" = [
 						"select_next"
-						"fallback_to_mappings"
+						"fallback"
 					];
 					"<Tab>" = [
 						"select_and_accept"
+						"fallback"
 					];
 				};
 				sources = {
