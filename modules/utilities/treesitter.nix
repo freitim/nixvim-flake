@@ -2,7 +2,7 @@
 
 {
   plugins = {
-		cmp-treesitter.enable = true;
+		# cmp-treesitter.enable = true;
     treesitter = {
       enable = true;
 			folding = false;

@@ -47,7 +47,7 @@
 		})
 	'';
 
-	colorscheme = "aki";
+	colorscheme = "evergarden";
 
   plugins = {
 		web-devicons = {

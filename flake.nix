@@ -17,7 +17,7 @@
 		cornelis,
     ...
   } @ inputs: let
-    config = import ./config; # import the module directly
+    config = import ./modules; # import the module directly
   in
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = [
