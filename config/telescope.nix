@@ -28,7 +28,7 @@
   keymaps = [
     {
       mode = "n";
-      key = "<leader>tf";
+      key = "<leader>ff";
       action = "<Cmd>Telescope file_browser<CR>";
       options.desc = "Find Files (File Browser)";
     }
