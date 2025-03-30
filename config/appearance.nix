@@ -43,7 +43,7 @@
 		})
 
 		require('aki').setup({
-			contrast_dark = 'medium',
+			contrast_dark = 'soft',
 		})
 	'';
 
