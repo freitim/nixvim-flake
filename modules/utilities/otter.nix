@@ -1,0 +1,9 @@
+{ ... }:
+
+{
+	plugins = {
+		otter = {
+			enable = true;
+		};
+	};
+}
