@@ -4,7 +4,7 @@
 	imports = [
 		./treesitter.nix
 		./telescope.nix
-		./completions.nix
+		./completion.nix
 		./home.nix
 		# ./obsidian.nix
 		./otter.nix
