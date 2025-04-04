@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./tmux-navigator.nix
     ./treesitter.nix
     ./telescope.nix
     ./completion.nix
