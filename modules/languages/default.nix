@@ -1,11 +1,9 @@
-{ ... }:
-
-{
-	imports = [
-		./lsp.nix
-		./markdown.nix
-		./agda.nix
-		# ./julia.nix
-		# ./quarto.nix
-	];
+{...}: {
+  imports = [
+    ./lsp.nix
+    ./markdown.nix
+    ./agda.nix
+    # ./julia.nix
+    ./quarto.nix
+  ];
 }
