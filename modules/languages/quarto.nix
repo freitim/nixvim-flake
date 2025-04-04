@@ -1,14 +1,19 @@
 {pkgs, ...}: {
+  extraPackages = [(pkgs.python3.withPackages (p: [p.jupytext p.pynvim p.jupyter_client]))];
   plugins = {
-    # image = {
-    # 	enable = true;
-    # };
-    # molten = {
-    # 	enable = true;
-    # 	settings = {
-    # 		image_provider = "image.nvim";
-    # 	};
-    # };
+    image = {
+      enable = true;
+    };
+    molten = {
+      enable = true;
+      settings = {
+        auto_open_output = false;
+        image_provider = "image.nvim";
+        wrap_output = true;
+        virt_text_output = true;
+        virt_lines_off_by_1 = true;
+      };
+    };
     quarto = {
       enable = true;
       settings = {
@@ -31,5 +36,4 @@
       };
     };
   };
-  extraPackages = [(pkgs.python3.withPackages (p: [p.jupytext]))];
 }
