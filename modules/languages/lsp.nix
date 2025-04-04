@@ -3,55 +3,52 @@
     enable = true;
 
     servers = {
-			# agda_ls = {
-			# 	enable = true;
-			# 	package = "";
-			# };
+      # agda_ls = {
+      # 	enable = true;
+      # 	package = "";
+      # };
 
-			digestif = {
-				enable = true;
-			};
+      digestif = {
+        enable = true;
+      };
 
       html = {
         enable = true;
-			};
-        
+      };
+
       julials = {
         enable = true;
-				package = null;
-			};
+        package = null;
+      };
 
-			# leanls = {
+      # leanls = {
       #   enable = true;
-			# };
+      # };
 
       lua_ls = {
         enable = true;
-			};
+      };
 
       marksman = {
         enable = true;
-			};
+      };
 
       nil_ls = {
         enable = true;
-			};
+      };
 
       pylsp = {
         enable = true;
-				# settings.plugins.black = {
-        #     enabled = true;
-				# };
       };
 
-			# ocamllsp = {
-			# 	enable = true;
-			# };
+      # ocamllsp = {
+      # 	enable = true;
+      # };
 
-			hls = {
-				enable = true;
-				installGhc = false;
-			};
+      hls = {
+        enable = true;
+        installGhc = false;
+      };
     };
   };
 }
