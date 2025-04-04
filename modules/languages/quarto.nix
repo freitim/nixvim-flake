@@ -18,12 +18,9 @@
         virt_lines_off_by_1 = true;
       };
     };
-    arto = {
+    quarto = {
       enable = true;
       settings = {
-        lspFeatures = {
-          chunks = "all";
-        };
         codeRunner = {
           enabled = true;
           default_method = "molten";
