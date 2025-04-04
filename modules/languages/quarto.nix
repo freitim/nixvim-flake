@@ -18,7 +18,7 @@
         virt_lines_off_by_1 = true;
       };
     };
-    quarto = {
+    arto = {
       enable = true;
       settings = {
         lspFeatures = {
