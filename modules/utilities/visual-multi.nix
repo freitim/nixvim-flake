@@ -3,6 +3,5 @@
     visual-multi = {
       enable = true;
     };
-    enable = {};
   };
 }
