@@ -6,10 +6,10 @@
 
     #TODO: move to keymaps
     keymaps = {
-      "<leader>tg" = "live_grep";
-      "<leader>tb" = "buffers";
-      "<leader>tt" = "treesitter";
-      "<leader>th" = "oldfiles";
+      "<leader>fg" = "live_grep";
+      "<leader>fb" = "buffers";
+      "<leader>ft" = "treesitter";
+      "<leader>fh" = "oldfiles";
     };
 
     settings.defaults = {
@@ -34,7 +34,7 @@
     }
     {
       mode = "n";
-      key = "<leader>tr";
+      key = "<leader>fr";
       action = "<Cmd>Telescope frecency<CR>";
       options.desc = "Find Frecent Files (Frecency)";
     }
