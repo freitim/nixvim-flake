@@ -1,5 +1,6 @@
 {pkgs, ...}: {
-  extraPackages = [(pkgs.python3.withPackages (p: [p.jupytext p.pynvim p.jupyter_client]))];
+  # extraPackages = [(pkgs.python3.withPackages (p: [p.jupytext p.pynvim p.jupyter_client]))];
+  extraPackages = [(pkgs.python3.withPackages (p: [p.jupytext]))];
   plugins = {
     image = {
       enable = true;
