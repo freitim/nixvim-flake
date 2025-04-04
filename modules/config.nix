@@ -15,7 +15,12 @@
       # providers.xclip.enable = true;
       providers.wl-copy.enable = true;
     };
-  
+		
+		globalOpts = {
+			# center cursor vertically
+			scrolloff = 999;
+		};
+
     opts = {
       updatetime = 100;
 

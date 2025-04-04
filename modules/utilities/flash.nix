@@ -1,0 +1,9 @@
+{ ... }:
+
+{
+	plugins = {
+		flash = {
+			enable = true;
+		};
+	};
+}
