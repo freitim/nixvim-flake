@@ -9,12 +9,7 @@
         preset = "obsidian";
         file_types = ["markdown" "quarto"];
         completions.blink.enabled = true;
-        latex = {
-          enabled = true;
-          render_modes = false;
-          converter = "latex2text";
-          highlight = "RenderMarkdownMath";
-        };
+        latex.enabled = true;
       };
     };
   };
