@@ -5,6 +5,7 @@
       settings = {
         preset = "obsidian";
         file_types = ["markdown" "quarto"];
+        completions.blink.enabled = true;
       };
     };
   };
