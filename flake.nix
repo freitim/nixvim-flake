@@ -5,16 +5,16 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
-		cornelis = {
-			url = "github:isovector/cornelis";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+    cornelis = {
+      url = "github:agda/cornelis";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     nixvim,
     flake-parts,
-		cornelis,
+    cornelis,
     ...
   } @ inputs: let
     config = import ./modules; # import the module directly
