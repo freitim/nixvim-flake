@@ -16,9 +16,9 @@
         owner = "comfysage";
         repo = "evergarden";
         rev = "mega";
-        hash = "sha256-CiRiZRmD7tuy/fNQwYJohiS1KSL+7ihTm29cMHunUWE=";
+        hash = "sha256-hxYm7Hm6PJhPj6QMEcmHdv2bapIlYmETJCWVLLYYd7Y=";
       };
-      nvimSkipModule = "evergarden.extras";
+      nvimSkipModule = ["evergarden.extras" "minidoc"];
     })
     (pkgs.vimUtils.buildVimPlugin {
       name = "aki";
