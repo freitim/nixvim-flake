@@ -16,7 +16,7 @@
         owner = "comfysage";
         repo = "evergarden";
         rev = "mega";
-        hash = "sha256-m8W+WcuA94zSZTRihVRbFkZKJcQrrhJgvCD7Z9EDfsA=";
+        hash = "sha256-GtlJUgz+4n5fDIWUT7gDltj5kpK2W+zwchm3vwHVDcM=";
       };
       nvimSkipModule = ["evergarden.extras" "minidoc"];
     })
