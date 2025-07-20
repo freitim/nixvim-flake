@@ -8,4 +8,5 @@
       mappings = true;
     };
   };
+  dependencies.lean.enable = false;
 }
