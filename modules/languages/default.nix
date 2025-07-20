@@ -3,7 +3,7 @@
     ./lsp.nix
     ./markdown.nix
     ./agda.nix
-    # ./lean.nix
+    ./lean.nix
     ./quarto.nix
   ];
 }
