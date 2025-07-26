@@ -2,6 +2,12 @@
   colorschemes = {
     everforest = {
       enable = true;
+      settings = {
+        background = "hard";
+        enable_italic = 1;
+        current_word = "grey background";
+        better_performance = 1;
+      };
     };
     # base16 = {
     # 	enable = true;
