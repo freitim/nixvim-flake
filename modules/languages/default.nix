@@ -4,6 +4,6 @@
     ./markdown.nix
     ./agda.nix
     ./lean.nix
-    ./quarto.nix
+	# ./quarto.nix
   ];
 }
