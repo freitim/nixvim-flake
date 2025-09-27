@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   plugins.lean = {
     enable = true;
     settings = {
@@ -8,5 +8,6 @@
       mappings = true;
     };
   };
-  dependencies.lean.enable = false;
+  dependencies.lean.enable = true;
+  # extraPackagesAfter = with pkgs; [lean4];
 }
