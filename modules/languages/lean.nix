@@ -2,9 +2,9 @@
   plugins.lean = {
     enable = true;
     settings = {
-      lsp = {
-        enable = true;
-      };
+      # lsp = {
+      #   enable = true;
+      # };
       mappings = true;
     };
   };
