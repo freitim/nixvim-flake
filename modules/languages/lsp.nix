@@ -49,6 +49,10 @@
         enable = true;
         installGhc = false;
       };
+
+      idris2_lsp = {
+        enable = true;
+      };
     };
   };
 }
