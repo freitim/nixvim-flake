@@ -3,7 +3,7 @@
     # cmp-treesitter.enable = true;
     treesitter = {
       enable = true;
-      folding.enable = true;
+      folding.enable = false;
       nixvimInjections = true;
       # grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       #   c
