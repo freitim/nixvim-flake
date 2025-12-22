@@ -21,9 +21,9 @@
         package = null;
       };
 
-      leanls = {
-        enable = true;
-      };
+      # leanls = {
+      #   enable = true;
+      # };
 
       lua_ls = {
         enable = true;
