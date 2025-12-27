@@ -5,7 +5,7 @@
     ./telescope.nix
     ./completion.nix
     # ./obsidian.nix
-    # ./otter.nix
+    ./otter.nix
     ./visual-multi.nix
     ./flash.nix
     ./indent-blankline.nix
