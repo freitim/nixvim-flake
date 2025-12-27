@@ -1,9 +1,7 @@
-{ ... }:
-
-{
-	plugins = {
-		otter = {
-			enable = true;
-		};
-	};
+{...}: {
+  plugins = {
+    otter = {
+      enable = true;
+    };
+  };
 }
