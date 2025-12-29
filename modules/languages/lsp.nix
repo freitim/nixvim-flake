@@ -33,6 +33,8 @@
         enable = true;
       };
 
+      metals.enable = true;
+
       nil_ls = {
         enable = true;
       };
