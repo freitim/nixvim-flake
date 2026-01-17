@@ -3,7 +3,7 @@
     everforest = {
       enable = true;
       settings = {
-        background = "hard";
+        background = "soft";
         enable_italic = 1;
         current_word = "grey background";
         better_performance = 1;
