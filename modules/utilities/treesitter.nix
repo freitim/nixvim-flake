@@ -32,10 +32,21 @@
         xml
         yaml
       ];
-      # languageRegister = {
-      #   markdown = ["idris2"];
-      #   markdown_inline = ["idris2"];
-      # };
     };
   };
+  autoCmd = [
+    {
+      event = [ "FileType" ];
+      pattern = [ "idris2" ];
+      callback = {
+        __raw = ''
+          function()
+          	if vim.fn.expand("%:e") == "md" then
+          		vim.treesitter.language.register('markdown', 'idris2')
+          	end
+          end
+        '';
+      };
+    }
+  ];
 }
