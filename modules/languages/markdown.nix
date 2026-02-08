@@ -17,10 +17,11 @@
     # };
     markview = {
       enable = true;
+      settings.preview.filetypes = ["markdown" "idris2"];
       # settings = {
       #   preview = {
       #     enable = true;
-      #     filetypes = ["md" "lagda"];
+      #     filetypes = ["markdown" "lagda" "idris2"];
       #   };
       #   latex = {
       #     enable = true;
@@ -40,4 +41,25 @@
   #     action.__raw = "require('nabla').popup";
   #   }
   # ];
+  autoCmd = [
+    {
+      event = ["BufEnter" "BufRead"];
+      pattern = ["*.md"];
+      callback = {
+        __raw = ''
+           function(args)
+           	if vim.bo.filetype == "idris2" then
+          vim.bo.filetype = "markdown"
+           				vim.schedule(function()
+           					if vim.api.nvim_buf_is_valid(args.buf) then
+           						vim.cmd("Markview enable")
+           					end
+           				end)
+          vim.bo.filetype = "markdown"
+                            end
+                                end
+        '';
+      };
+    }
+  ];
 }

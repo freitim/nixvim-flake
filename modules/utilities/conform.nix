@@ -9,7 +9,7 @@
       settings = {
         formatters_by_ft = {
           nix = [
-            "alejandra"
+            "nixfmt"
           ];
           python = [
             "black"
@@ -23,8 +23,8 @@
           lsp_format = "fallback";
         };
         formatters = {
-          alejandra = {
-            command = lib.getExe pkgs.alejandra;
+          nixfmt = {
+            command = lib.getExe pkgs.nixfmt;
           };
           black = {
             command = lib.getExe pkgs.black;

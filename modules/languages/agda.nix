@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   plugins.cornelis = {
     enable = true;
+    lazyLoad.settings.ft = [
+      "agda"
+    ];
     settings = {
       use_global_binary = 1;
       no_agda_input = 1;
