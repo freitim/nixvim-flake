@@ -1,7 +1,5 @@
-{pkgs, ...}: {
-  # extraPackages = with pkgs; [
-  #   python3Packages.pylatexenc
-  # ];
+{ pkgs, ... }:
+{
   plugins = {
     # render-markdown = {
     #   enable = true;
@@ -12,54 +10,27 @@
     #     latex.enabled = false;
     #   };
     # };
-    # nabla = {
-    #   enable = true;
-    # };
     markview = {
       enable = true;
-      settings.preview.filetypes = ["markdown" "idris2"];
-      # settings = {
-      #   preview = {
-      #     enable = true;
-      #     filetypes = ["markdown" "lagda" "idris2"];
-      #   };
-      #   latex = {
-      #     enable = true;
-      #   };
-      #   markdown = {
-      #     enable = true;
-      #   };
-      #   markdown_inline = {
-      #     enable = true;
-      #   };
-      # };
+      settings = {
+        preview = {
+          filetypes = [
+            "markdown"
+            "quarto"
+            "rmd"
+            "typst"
+            "idris2"
+          ];
+          condition = {
+            __raw = ''
+              	function(buffer)
+              		local name = vim.api.nvim_buf_get_name(buffer)
+              		return name:match("%.md$")
+              	end
+            '';
+          };
+        };
+      };
     };
   };
-  # keymaps = [
-  #   {
-  #     key = "<leader>p";
-  #     action.__raw = "require('nabla').popup";
-  #   }
-  # ];
-  autoCmd = [
-    {
-      event = ["BufEnter" "BufRead"];
-      pattern = ["*.md"];
-      callback = {
-        __raw = ''
-           function(args)
-           	if vim.bo.filetype == "idris2" then
-          vim.bo.filetype = "markdown"
-           				vim.schedule(function()
-           					if vim.api.nvim_buf_is_valid(args.buf) then
-           						vim.cmd("Markview enable")
-           					end
-           				end)
-          vim.bo.filetype = "markdown"
-                            end
-                                end
-        '';
-      };
-    }
-  ];
 }

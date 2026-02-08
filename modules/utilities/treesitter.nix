@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   plugins = {
     treesitter = {
       enable = true;
@@ -31,10 +32,10 @@
         xml
         yaml
       ];
-      languageRegister = {
-        markdown = ["idris2"];
-        markdown_inline = ["idris2"];
-      };
+      # languageRegister = {
+      #   markdown = ["idris2"];
+      #   markdown_inline = ["idris2"];
+      # };
     };
   };
 }
