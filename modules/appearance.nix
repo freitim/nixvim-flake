@@ -12,7 +12,7 @@
     # };
     base16 = {
       enable = true;
-      colorscheme = "rose-pine-moon";
+      colorscheme = "ashes";
     };
   };
 
