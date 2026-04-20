@@ -1,6 +1,7 @@
-{...}: {
+{ ... }:
+{
   imports = [
-    ./tmux-navigator.nix
+    # ./tmux-navigator.nix
     ./treesitter.nix
     ./telescope.nix
     ./completion.nix
@@ -11,6 +12,7 @@
     ./indent-blankline.nix
     ./virt-column.nix
     ./conform.nix
+    ./which-key.nix
     ./home.nix
   ];
 }

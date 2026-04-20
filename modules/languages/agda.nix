@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ lib, ... }:
+{
   plugins.cornelis = {
     enable = true;
     lazyLoad.settings.ft = [
@@ -10,102 +11,63 @@
     };
   };
 
-  keymaps = [
-    {
-      mode = "n";
-      key = "<leader>l";
-      action = "<cmd>CornelisLoad<CR>";
-      options = {
-        noremap = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>r";
-      action = "<cmd>CornelisRefine<CR>";
-      options = {
-        noremap = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>d";
-      action = "<cmd>CornelisMakeCase<CR>";
-      options = {
-        noremap = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>,";
-      action = "<cmd>CornelisTypeContext Normalised<CR>";
-      options = {
-        noremap = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>.";
-      action = "<cmd>CornelisTypeContextInfer Normalised<CR>";
-      options = {
-        noremap = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>n";
-      action = "<cmd>CornelisSolve<CR>";
-      options = {
-        noremap = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>a";
-      action = "<cmd>CornelisAuto<CR>";
-      options = {
-        noremap = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "gd";
-      action = "<cmd>CornelisGoToDefinition<CR>";
-      options = {
-        noremap = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>b";
-      action = "<cmd>CornelisPrevGoal<CR>";
-      options = {
-        noremap = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>f";
-      action = "<cmd>CornelisNextGoal<CR>";
-      options = {
-        noremap = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<C-A>";
-      action = "<cmd>CornelisInc<CR>";
-      options = {
-        noremap = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "<C-X>";
-      action = "<cmd>CornelisDec<CR>";
-      options = {
-        noremap = true;
-      };
-    }
-  ];
+  files."after/ftplugin/agda.lua".keymaps =
+    lib.nixvim.keymaps.mkKeymaps
+      {
+        mode = "n";
+        options = {
+          buffer = true;
+          noremap = true;
+        };
+      }
+      [
+        {
+          action = "<cmd>CornelisLoad<CR>";
+          key = "<leader>l";
+        }
+        {
+          action = "<cmd>CornelisRefine<CR>";
+          key = "<leader>r";
+        }
+        {
+          action = "<cmd>CornelisMakeCase<CR>";
+          key = "<leader>d";
+        }
+        {
+          action = "<cmd>CornelisTypeContext Normalised<CR>";
+          key = "<leader>,";
+        }
+        {
+          action = "<cmd>CornelisTypeContextInfer Normalised<CR>";
+          key = "<leader>.";
+        }
+        {
+          action = "<cmd>CornelisSolve<CR>";
+          key = "<leader>n";
+        }
+        {
+          action = "<cmd>CornelisAuto<CR>";
+          key = "<leader>a";
+        }
+        {
+          action = "<cmd>CornelisGoToDefinition<CR>";
+          key = "gd";
+        }
+        {
+          action = "<cmd>CornelisPrevGoal<CR>";
+          key = "<leader>b";
+        }
+        {
+          action = "<cmd>CornelisNextGoal<CR>";
+          key = "<leader>f";
+        }
+        {
+          action = "<cmd>CornelisInc<CR>";
+          key = "<C-A>";
+        }
+        {
+          action = "<cmd>CornelisDec<CR>";
+          key = "<C-X>";
+        }
+      ];
 }
