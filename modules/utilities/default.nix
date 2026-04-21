@@ -12,7 +12,9 @@
     ./indent-blankline.nix
     ./virt-column.nix
     ./conform.nix
+    ./noice.nix
     ./which-key.nix
+    ./comment.nix
     ./home.nix
   ];
 }
