@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, ... }:
 {
   plugins = {
     treesitter = {
@@ -7,7 +7,7 @@
       indent.enable = true;
       folding.enable = false;
       nixvimInjections = true;
-      grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+      grammarPackages = with config.plugins.treesitter.package.builtGrammars; [
         agda
         bash
         comment
