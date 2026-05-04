@@ -20,6 +20,7 @@
     lib.nixvim.keymaps.mkKeymaps
       {
         options.buffer = true;
+        mode = [ "n" ];
       }
       [
         # core
@@ -109,20 +110,16 @@
         {
           action = "<Cmd>lua require('idris2.repl').evaluate()<CR>";
           key = "<Leader>e";
-          mode = [
-            "n"
-            "i"
-          ];
         }
         {
           action = "<Cmd>lua require('idris2.repl').evaluate({visual=true})<CR>";
           key = "<Leader>e";
-          mode = "v";
+          mode = [ "v" ];
         }
         {
           action = "<Cmd>lua require('idris2.repl').evaluate({visual=true,sub=true})<CR>";
           key = "<Leader>es";
-          mode = "v";
+          mode = [ "v" ];
         }
         {
           action = "<Cmd>lua require('idris2.repl').evaluate({virtual=true})<CR>";
