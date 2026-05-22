@@ -1,6 +1,6 @@
-{ ... }:
+{ pkgs, ... }:
 {
-  plugins.tabout = {
-    enable = true;
-  };
+  extraPlugins = with pkgs; [
+    vimPlugins.tabout-nvim
+  ];
 }
