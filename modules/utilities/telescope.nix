@@ -1,22 +1,13 @@
 { pkgs, ... }:
-
 {
   plugins.telescope = {
     enable = true;
 
-    #TODO: move to keymaps
-    keymaps = {
-      "<leader>fg" = "live_grep";
-      "<leader>fb" = "buffers";
-      "<leader>ft" = "treesitter";
-      "<leader>fh" = "oldfiles";
-    };
-
     settings.defaults = {
       file_ignore_patterns = [
-				"^.git/"
+        "^.git/"
       ];
-			set_env.COLORTERM = "truecolor";
+      set_env.COLORTERM = "truecolor";
     };
 
     extensions = {
@@ -37,6 +28,30 @@
       key = "<leader>fr";
       action = "<Cmd>Telescope frecency<CR>";
       options.desc = "Find Frecent Files (Frecency)";
+    }
+    {
+      mode = "n";
+      key = "<leader>fg";
+      action = "<Cmd>Telescope live_grep<CR>";
+      options.desc = "Live Grep";
+    }
+    {
+      mode = "n";
+      key = "<leader>fb";
+      action = "<Cmd>Telescope buffers<CR>";
+      options.desc = "Buffers";
+    }
+    {
+      mode = "n";
+      key = "<leader>ft";
+      action = "<Cmd>Telescope treesitter<CR>";
+      options.desc = "Treesitter";
+    }
+    {
+      mode = "n";
+      key = "<leader>fo";
+      action = "<Cmd>Telescope oldfiles<CR>";
+      options.desc = "Old Files";
     }
   ];
 
