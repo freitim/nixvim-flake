@@ -15,6 +15,8 @@
     ./noice.nix
     ./which-key.nix
     ./comment.nix
+    ./colorizer.nix
+    ./tabout.nix
     ./home.nix
   ];
 }

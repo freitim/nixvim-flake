@@ -1,0 +1,6 @@
+{ ... }:
+{
+  plugins.tabout = {
+    enable = true;
+  };
+}
