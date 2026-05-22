@@ -1,0 +1,6 @@
+{ ... }:
+{
+  plugins.numbertoggle = {
+    enable = true;
+  };
+}

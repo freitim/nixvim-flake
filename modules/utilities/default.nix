@@ -17,6 +17,7 @@
     ./comment.nix
     ./colorizer.nix
     ./tabout.nix
+    ./numbertoggle.nix
     ./home.nix
   ];
 }
