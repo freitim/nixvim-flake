@@ -39,7 +39,12 @@
         enable = true;
       };
 
-      pylsp = {
+      # python
+      ruff = {
+        enable = true;
+      };
+
+      ty = {
         enable = true;
       };
 
