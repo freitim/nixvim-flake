@@ -4,6 +4,7 @@
     # ./tmux-navigator.nix
     ./treesitter.nix
     ./telescope.nix
+    ./trouble.nix
     ./completion.nix
     # ./obsidian.nix
     # ./otter.nix
