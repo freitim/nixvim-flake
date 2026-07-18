@@ -8,7 +8,7 @@
           split_position = "right";
         };
         code_action_post_hook = lib.nixvim.mkRaw ''
-          function()
+          function(action)
           	vim.cmd('silent write')
           end
         '';
