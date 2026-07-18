@@ -10,7 +10,6 @@
             "quarto"
             "rmd"
             "typst"
-            "idris2"
           ];
         };
       };
