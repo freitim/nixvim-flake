@@ -1,4 +1,7 @@
-{ pkgs, ... }:
+{
+  theme ? "ashes",
+  ...
+}:
 {
   colorschemes = {
     # everforest = {
@@ -12,7 +15,7 @@
     # };
     base16 = {
       enable = true;
-      colorscheme = "ashes";
+      colorscheme = theme;
     };
   };
 

@@ -7,14 +7,16 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = {
-    nixvim,
-    flake-parts,
-    ...
-  } @ inputs: let
-    config = import ./modules; # import the module directly
-  in
-    flake-parts.lib.mkFlake {inherit inputs;} {
+  outputs =
+    {
+      nixvim,
+      flake-parts,
+      ...
+    }@inputs:
+    let
+      config = import ./modules; # import the module directly
+    in
+    flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
         "aarch64-linux"
@@ -22,34 +24,48 @@
         "aarch64-darwin"
       ];
 
-      perSystem = {
-        pkgs,
-        system,
-        ...
-      }: let
-        nixvimLib = nixvim.lib.${system};
-        nixvim' = nixvim.legacyPackages.${system};
-        nvim = nixvim'.makeNixvimWithModule {
-          inherit pkgs;
-          module = config;
-          # You can use `extraSpecialArgs` to pass additional arguments to your module files
-          extraSpecialArgs = {
-            # inherit (inputs) foo;
-          };
-        };
-      in {
-        checks = {
-          # Run `nix flake check .` to verify that your config is not broken
-          default = nixvimLib.check.mkTestDerivationFromNvim {
-            inherit nvim;
-            name = "A nixvim configuration";
-          };
-        };
-
-        packages = {
-          # Lets you run `nix run .` to start nixvim
-          default = nvim;
+      flake = {
+        lib = {
+          mkNixvim =
+            {
+              pkgs,
+              theme ? "ashes",
+            }:
+            nixvim.legacyPackages.${pkgs.system}.makeNixvimWithModule {
+              inherit pkgs;
+              module = config;
+              # You can use `extraSpecialArgs` to pass additional arguments to your module files
+              extraSpecialArgs = {
+                inherit theme;
+              };
+            };
         };
       };
+      perSystem =
+        {
+          pkgs,
+          system,
+          ...
+        }:
+        let
+          nixvimLib = nixvim.lib.${system};
+          nvim = inputs.self.lib.mkNixvim {
+            inherit pkgs;
+          };
+        in
+        {
+          checks = {
+            # Run `nix flake check .` to verify that your config is not broken
+            default = nixvimLib.check.mkTestDerivationFromNvim {
+              inherit nvim;
+              name = "A nixvim configuration";
+            };
+          };
+
+          packages = {
+            # Lets you run `nix run .` to start nixvim
+            default = nvim;
+          };
+        };
     };
 }
