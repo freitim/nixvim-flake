@@ -1,4 +1,7 @@
-{ config, ... }:
+{ pkgs, config, ... }:
+let
+  treesitter-idris2-grammer = pkgs.vimPlugins.nvim-treesitter-parsers.idris;
+in
 {
   plugins = {
     treesitter = {
@@ -7,33 +10,44 @@
       indent.enable = true;
       folding.enable = false;
       nixvimInjections = true;
-      grammarPackages = with config.plugins.treesitter.package.builtGrammars; [
-        agda
-        bash
-        comment
-        gleam
-        haskell
-        html
-        json
-        julia
-        latex
-        lua
-        make
-        markdown
-        markdown_inline
-        nix
-        python
-        regex
-        scala
-        toml
-        typst
-        vim
-        vimdoc
-        xml
-        yaml
-      ];
+
+      grammarPackages =
+        (with config.plugins.treesitter.package.builtGrammars; [
+          agda
+          bash
+          comment
+          gleam
+          haskell
+          html
+          json
+          julia
+          latex
+          lua
+          make
+          markdown
+          markdown_inline
+          nix
+          python
+          regex
+          scala
+          toml
+          typst
+          vim
+          vimdoc
+          xml
+          yaml
+        ])
+        ++ [ treesitter-idris2-grammer ];
+      languageRegister = {
+        idris = "idris";
+        idris2 = "idris";
+      };
     };
   };
+  extraPlugins = [
+    treesitter-idris2-grammer
+  ];
+
   extraConfigLua = ''
     local orig_ts_start = vim.treesitter.start
     vim.treesitter.start = function(buf, lang)
