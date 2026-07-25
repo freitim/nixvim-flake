@@ -48,22 +48,6 @@ in
     treesitter-idris2-grammer
   ];
 
-  extraConfigLua = ''
-    local orig_ts_start = vim.treesitter.start
-    vim.treesitter.start = function(buf, lang)
-      if lang == "idris" or lang == "idris2" then
-        local buf_name = vim.api.nvim_buf_get_name(buf or 0)
-        local ext = vim.fn.fnamemodify(buf_name, ":e")
-        
-        if ext == "md" then
-          return orig_ts_start(buf, "markdown")
-        else
-          return false
-        end
-      end
-      return orig_ts_start(buf, lang)
-    end
-  '';
   autoCmd = [
     {
       event = [ "FileType" ];
