@@ -1,23 +1,31 @@
 {
-  theme ? "ashes",
+  theme ? "mountain",
+  pkgs,
   ...
 }:
 {
-  colorschemes = {
-    # everforest = {
-    #   enable = true;
-    #   settings = {
-    #     background = "soft";
-    #     enable_italic = 1;
-    #     current_word = "grey background";
-    #     better_performance = 1;
-    #   };
-    # };
-    base16 = {
-      enable = true;
-      colorscheme = theme;
-    };
-  };
+  extraPlugins = with pkgs; [
+    vimPlugins.tinted-nvim
+  ];
+  extraConfigLuaPre = ''
+    require("tinted-nvim").setup()
+  '';
+  colorscheme = "base24-${theme}";
+  # colorschemes = {
+  #   # everforest = {
+  #   #   enable = true;
+  #   #   settings = {
+  #   #     background = "soft";
+  #   #     enable_italic = 1;
+  #   #     current_word = "grey background";
+  #   #     better_performance = 1;
+  #   #   };
+  #   # };
+  #   base16 = {
+  #     enable = true;
+  #     colorscheme = theme;
+  #   };
+  # };
 
   # extraPlugins = [
   #   # (pkgs.vimUtils.buildVimPlugin {
