@@ -29,7 +29,7 @@
           mkNixvim =
             {
               pkgs,
-              theme ? "base16-evergarden",
+              theme ? "base16-kanagawa-paper",
             }:
             nixvim.legacyPackages.${pkgs.system}.makeNixvimWithModule {
               inherit pkgs;
