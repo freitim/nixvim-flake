@@ -1,18 +1,20 @@
 {
-  theme ? "base24-mountain",
+  theme,
+  lib,
   pkgs,
   ...
 }:
+let
+  isSpecificTheme = builtins.pathExists (./themes + "/${theme}.nix");
+in
 {
-  extraPlugins = with pkgs; [
-    vimPlugins.tinted-nvim
-  ];
+  extraPlugins = lib.optional (!isSpecificTheme) pkgs.vimPlugins.tinted-nvim;
 
-  extraConfigLuaPre = ''
+  extraConfigLuaPre = lib.mkIf (!isSpecificTheme) ''
     require("tinted-nvim").setup()
   '';
 
-  colorscheme = theme;
+  colorscheme = lib.mkIf (!isSpecificTheme) theme;
 
   plugins = {
     web-devicons = {

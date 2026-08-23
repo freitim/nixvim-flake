@@ -2,6 +2,7 @@
 {
   imports = [
     ./config.nix
+    ./themes
     ./appearance.nix
     ./utilities
     ./languages
