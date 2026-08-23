@@ -5,7 +5,8 @@
   ...
 }:
 let
-  isSpecificTheme = builtins.pathExists (./themes + "/${theme}.nix");
+  cleanTheme = lib.foldl (acc: prefix: lib.removePrefix prefix acc) theme [ "base16-" "base24-" ];
+  isSpecificTheme = builtins.pathExists (./themes + "/${cleanTheme}.nix");
 in
 {
   extraPlugins = lib.optional (!isSpecificTheme) pkgs.vimPlugins.tinted-nvim;
