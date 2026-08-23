@@ -1,65 +1,23 @@
 {
   plugins.lsp = {
     enable = true;
-
     servers = {
-      # agda_ls = {
-      # 	enable = true;
-      # 	package = "";
-      # };
-
-      digestif = {
-        enable = true;
-      };
-
-      html = {
-        enable = true;
-      };
-
-      julials = {
-        enable = true;
-        package = null;
-      };
-
-      # leanls = {
-      #   enable = true;
-      # };
-
-      lua_ls = {
-        enable = true;
-      };
-
-      marksman = {
-        enable = true;
-      };
-
-      metals.enable = true;
-
-      nil_ls = {
-        enable = true;
-      };
+      digestif.enable = true;
+      # html.enable = true;
+      idris2_lsp.enable = true;
+      lua_ls.enable = true;
+      marksman.enable = true;
+      # metals.enable = true;
+      nil_ls.enable = true;
 
       # python
-      ruff = {
-        enable = true;
-      };
+      ruff.enable = true;
+      ty.enable = true;
 
-      ty = {
-        enable = true;
-      };
-
-      # ocamllsp = {
-      # 	enable = true;
+      # hls = {
+      #   enable = true;
+      #   installGhc = false;
       # };
-
-      hls = {
-        enable = true;
-        installGhc = false;
-      };
-
-      idris2_lsp = {
-        enable = true;
-      };
     };
   };
 }

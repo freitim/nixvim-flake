@@ -1,10 +1,10 @@
 { ... }:
 {
-	imports = [
-		./config.nix
-		./appearance.nix
-		./utilities
-		./languages
-		./keymaps.nix
-	];
+  imports = [
+    ./config.nix
+    ./appearance.nix
+    ./utilities
+    ./languages
+    ./keymaps.nix
+  ];
 }

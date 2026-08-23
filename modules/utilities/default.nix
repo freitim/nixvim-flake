@@ -16,7 +16,7 @@
     ./noice.nix
     ./which-key.nix
     ./comment.nix
-    ./colorizer.nix
+    # ./colorizer.nix
     ./tabout.nix
     ./numbertoggle.nix
     ./home.nix
