@@ -3,10 +3,7 @@
   plugins = {
     treesitter = {
       enable = true;
-      highlight = {
-        enable = true;
-        disable = [ "idris" ];
-      };
+      highlight.enable = true;
       indent.enable = true;
       folding.enable = false;
       nixvimInjections = true;
@@ -19,7 +16,7 @@
           gleam
           haskell
           html
-          idris
+          # idris
           json
           julia
           latex
@@ -39,9 +36,9 @@
           yaml
         ]
       );
-      languageRegister = {
-        idris2 = "idris";
-      };
+      # languageRegister = {
+      #   idris2 = "idris";
+      # };
     };
   };
 
