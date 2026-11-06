@@ -16,7 +16,7 @@
           gleam
           haskell
           html
-          # idris
+          idris
           json
           julia
           latex
@@ -36,9 +36,9 @@
           yaml
         ]
       );
-      # languageRegister = {
-      #   idris2 = "idris";
-      # };
+      languageRegister = {
+        idris2 = "idris";
+      };
     };
   };
 
